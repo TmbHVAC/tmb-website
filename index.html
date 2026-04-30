@@ -1,86 +1,334 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>TMB Heating & Cooling</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>TMB Heating & Cooling LLC | HVAC Service in Erie & Niagara County</title>
+  <meta name="description" content="TMB Heating & Cooling LLC provides heating, cooling, emergency HVAC service, installations, and maintenance plans across Erie and Niagara County. Temperature Made Better." />
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #0f172a;
-      color: white;
+    * {
+      box-sizing: border-box;
     }
 
-    .container {
-      padding: 40px 20px;
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0f172a;
+      color: #ffffff;
+      line-height: 1.6;
+      padding-bottom: 70px;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .top-bar {
+      background: #020617;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .nav {
+      max-width: 1150px;
+      margin: auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .logo {
+      max-width: 145px;
+      height: auto;
+      display: block;
+    }
+
+    .top-phone {
+      background: #f97316;
+      color: white;
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: bold;
+      white-space: nowrap;
+      box-shadow: 0 10px 25px rgba(249,115,22,0.25);
+    }
+
+    .hero {
+      background:
+        linear-gradient(rgba(2,6,23,0.82), rgba(15,23,42,0.94)),
+        radial-gradient(circle at top right, rgba(249,115,22,0.25), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(59,130,246,0.22), transparent 35%);
+      padding: 85px 20px 75px;
       text-align: center;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(249,115,22,0.15);
+      color: #fed7aa;
+      border: 1px solid rgba(249,115,22,0.35);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 6vw, 62px);
+      line-height: 1.05;
+      margin: 0 0 18px;
+      letter-spacing: -1.5px;
+    }
+
+    h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.15;
+      margin: 0 0 14px;
+      letter-spacing: -0.8px;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: #cbd5e1;
+      max-width: 720px;
+      margin: 0 auto 24px;
+    }
+
+    .btn-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 26px;
     }
 
     .btn {
       display: inline-block;
-      padding: 15px 25px;
       background: #f97316;
       color: white;
       text-decoration: none;
-      font-size: 18px;
-      border-radius: 8px;
-      margin-top: 15px;
+      padding: 15px 24px;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 12px 28px rgba(249,115,22,0.28);
+      transition: transform 0.2s ease, opacity 0.2s ease;
     }
 
-    .section-light {
-      background: white;
-      color: black;
-      padding: 40px 20px;
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.25);
+      box-shadow: none;
+    }
+
+    section {
+      padding: 70px 20px;
+    }
+
+    .wrap {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      margin: 0 auto 35px;
       text-align: center;
+    }
+
+    .section-intro p {
+      color: #cbd5e1;
+      font-size: 18px;
+    }
+
+    .light {
+      background: #f8fafc;
+      color: #0f172a;
+    }
+
+    .light .section-intro p {
+      color: #475569;
     }
 
     .grid {
       display: grid;
-      gap: 15px;
-      margin-top: 20px;
+      gap: 22px;
     }
 
-.card {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 10px;
-  color: white;
-}
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card {
+      background: linear-gradient(145deg, #1e293b, #111827);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.24);
+    }
+
+    .light-card {
+      background: white;
+      color: #0f172a;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: 0 18px 40px rgba(15,23,42,0.08);
+    }
+
+    .service-icon {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .areas {
+      text-align: center;
+      font-size: 18px;
+      line-height: 2;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .pill {
+      display: inline-block;
+      margin: 6px;
+      padding: 10px 15px;
+      border-radius: 999px;
+      background: #e2e8f0;
+      color: #0f172a;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .review-stars {
+      color: #fbbf24;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .quote-section {
+      background:
+        linear-gradient(rgba(15,23,42,0.95), rgba(15,23,42,0.95)),
+        radial-gradient(circle at top right, rgba(249,115,22,0.3), transparent 35%);
+    }
+
+    form {
+      max-width: 620px;
+      margin: 32px auto 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 15px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      font-size: 16px;
+      background: white;
+      color: #0f172a;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .footer {
+      background: #020617;
+      padding: 42px 20px;
+      text-align: center;
+      color: #cbd5e1;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer strong {
+      color: white;
+    }
 
     .sticky-call {
       position: fixed;
       bottom: 0;
+      left: 0;
       width: 100%;
       background: #f97316;
+      color: white;
       text-align: center;
-      padding: 15px;
-      font-weight: bold;
       z-index: 1000;
+      box-shadow: 0 -8px 25px rgba(0,0,0,0.25);
     }
 
-    .header {
-      background: #020617;
-      padding: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      max-width: 140px;
-      height: auto;
-    }
-
-    .call-top {
+    .sticky-call a {
+      display: block;
+      padding: 16px;
       color: white;
       text-decoration: none;
+      font-size: 18px;
       font-weight: bold;
     }
 
-    @media (min-width: 768px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
+    .note {
+      font-size: 14px;
+      color: #cbd5e1;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 800px) {
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        flex-direction: column;
+      }
+
+      .top-phone {
+        width: 100%;
+        text-align: center;
+      }
+
+      .hero {
+        padding-top: 55px;
       }
     }
   </style>
@@ -88,68 +336,185 @@
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
-  <img src="TMBCard.png logo only.png" class="logo">
-  <a href="tel:17169549186" class="call-top">📞 (716) 954-9186</a>
-</div>
-
-<!-- HERO -->
-<div class="container">
-  <h1>Fast, Reliable HVAC Service You Can Trust</h1>
-  <p>Serving Erie & Niagara County</p>
-
-  <a href="tel:17169549186" class="btn">Call Now</a>
-
-  <p style="margin-top:10px;">24/7 Emergency Service Available</p>
-</div>
-
-<!-- SERVICES -->
-<div class="section-light">
-  <h2>Our Services</h2>
-
-  <div class="grid">
-    <div class="card">🔥 Heating Repair & Installation</div>
-    <div class="card">❄️ Air Conditioning Service</div>
-    <div class="card">🛠 System Installations</div>
-    <div class="card">📋 Maintenance Plans</div>
+  <div class="top-bar">
+    <div class="nav">
+      <img src="TMBCard.png logo only.png" alt="TMB Heating & Cooling LLC Logo" class="logo">
+      <a href="tel:17169549186" class="top-phone">📞 (716) 954-9186</a>
+    </div>
   </div>
-</div>
 
-<!-- REVIEWS -->
-<div class="container">
-  <h2>What Customers Are Saying</h2>
+  <header class="hero">
+    <div class="hero-content">
+      <div class="badge">24/7 Emergency HVAC Service Available</div>
+      <h1>Fast, Reliable Heating & Cooling Service You Can Trust</h1>
+      <p>
+        TMB Heating & Cooling LLC provides professional HVAC service, repairs, maintenance,
+        and installations throughout Erie and Niagara County.
+      </p>
 
-  <div class="grid">
-    <div class="card">⭐️⭐️⭐️⭐️⭐️ Quick, honest, and fixed the issue the first time.</div>
-    <div class="card">⭐️⭐️⭐️⭐️⭐️ Very professional and explained everything clearly.</div>
-    <div class="card">⭐️⭐️⭐️⭐️⭐️ Showed up fast and got our heat back on.</div>
+      <div class="btn-row">
+        <a href="tel:17169549186" class="btn">Call Now</a>
+        <a href="#quote" class="btn secondary">Request a Quote</a>
+      </div>
+
+      <p class="note">Temperature Made Better • Owner-Operated • Honest Diagnostics</p>
+    </div>
+  </header>
+
+  <section class="light">
+    <div class="wrap">
+      <div class="section-intro">
+        <h2>HVAC Services</h2>
+        <p>Clean, professional service for homeowners who want the job diagnosed properly and done right.</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="light-card">
+          <div class="service-icon">🔥</div>
+          <h3>Heating Repair & Installation</h3>
+          <p>Furnace troubleshooting, no-heat calls, replacement options, safety checks, and heating system service.</p>
+        </div>
+
+        <div class="light-card">
+          <div class="service-icon">❄️</div>
+          <h3>Air Conditioning Service</h3>
+          <p>AC diagnostics, maintenance, airflow checks, refrigerant-related concerns, and cooling system repairs.</p>
+        </div>
+
+        <div class="light-card">
+          <div class="service-icon">🛠</div>
+          <h3>System Installations</h3>
+          <p>Professional HVAC equipment replacement and installation with clear recommendations and clean workmanship.</p>
+        </div>
+
+        <div class="light-card">
+          <div class="service-icon">📋</div>
+          <h3>Maintenance Plans</h3>
+          <p>Seasonal tune-ups to help improve comfort, reliability, efficiency, and reduce surprise breakdowns.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-intro">
+        <h2>Why Choose TMB?</h2>
+        <p>Big-company professionalism with owner-operated attention to detail.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Owner-Operated</h3>
+          <p>You deal directly with the person responsible for the work, not a call center or high-pressure sales team.</p>
+        </div>
+
+        <div class="card">
+          <h3>Honest Diagnostics</h3>
+          <p>Clear explanations, practical options, and recommendations based on what your system actually needs.</p>
+        </div>
+
+        <div class="card">
+          <h3>Clean Professional Work</h3>
+          <p>Respectful service, clean job sites, and a focus on doing the work correctly the first time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="light">
+    <div class="wrap">
+      <div class="section-intro">
+        <h2>What Customers Are Saying</h2>
+        <p>Trust matters when someone is working inside your home.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="light-card">
+          <div class="review-stars">★★★★★</div>
+          <p>“Quick, honest, and fixed the issue the first time.”</p>
+        </div>
+
+        <div class="light-card">
+          <div class="review-stars">★★★★★</div>
+          <p>“Very professional and explained everything clearly.”</p>
+        </div>
+
+        <div class="light-card">
+          <div class="review-stars">★★★★★</div>
+          <p>“Showed up fast and got our heat back on.”</p>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:30px;">
+        <a href="https://www.google.com/search?sca_esv=e33a3bf4f77af5c0&sxsrf=ANbL-n5IbcViWSMJpK8uOdIgqDbombVAfA:1777511865950&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOUQYBeDtZnEaWBoLQHktAXgrCbHLJg44BlMBDeVhSm5yUtMkPETtFDmnsvPDhRL38ymu4QvO1-EAwm_mJUzxBUZsggVzc45i1VR-LXqZMPEW1HZNfw%3D%3D&q=TMB+Heating+and+Cooling+LLC+Reviews&sa=X&ved=2ahUKEwjYnOras5SUAxUFlYkEHVLjF0cQ0bkNegQINRAD&biw=1528&bih=828&dpr=1.25#" target="_blank" class="btn">
+          ⭐ Read or Leave a Google Review
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-intro">
+        <h2>Service Areas</h2>
+        <p>Serving homeowners throughout Western New York, including Erie and Niagara County.</p>
+      </div>
+
+      <div class="areas">
+        <span class="pill">Buffalo</span>
+        <span class="pill">Tonawanda</span>
+        <span class="pill">North Tonawanda</span>
+        <span class="pill">Amherst</span>
+        <span class="pill">Cheektowaga</span>
+        <span class="pill">Williamsville</span>
+        <span class="pill">Kenmore</span>
+        <span class="pill">Niagara Falls</span>
+        <span class="pill">Lockport</span>
+        <span class="pill">Grand Island</span>
+        <span class="pill">Erie County</span>
+        <span class="pill">Niagara County</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="quote" class="quote-section">
+    <div class="wrap">
+      <div class="section-intro">
+        <h2>Request Service or a Free Quote</h2>
+        <p>Send a quick message and TMB Heating & Cooling will get back to you as soon as possible.</p>
+      </div>
+
+      <form action="https://formsubmit.co/tmbheatingandcooling@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New Website Lead - TMB Heating & Cooling">
+        <input type="hidden" name="_captcha" value="false">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <input type="email" name="email" placeholder="Email Address">
+        <textarea name="message" placeholder="Tell us what you need help with..." required></textarea>
+
+        <button type="submit" class="btn">Submit Request</button>
+      </form>
+
+      <p class="note">Prefer to call? Tap below anytime.</p>
+      <div style="text-align:center;">
+        <a href="tel:17169549186" class="btn">Call (716) 954-9186</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <strong>TMB Heating & Cooling LLC</strong><br>
+    Temperature Made Better<br>
+    Serving Erie & Niagara County<br><br>
+    <a href="tel:17169549186">(716) 954-9186</a><br>
+    <a href="mailto:tmbheatingandcooling@gmail.com">tmbheatingandcooling@gmail.com</a>
+  </footer>
+
+  <div class="sticky-call">
+    <a href="tel:17169549186">📞 Call Now: (716) 954-9186</a>
   </div>
-</div>
-
-<!-- WHY US -->
-<div class="section-light">
-  <h2>Why Choose TMB?</h2>
-
-  <p>✔ Owner-Operated</p>
-  <p>✔ Honest Diagnostics</p>
-  <p>✔ Clean, Professional Work</p>
-  <p>✔ Fast Response Times</p>
-</div>
-
-<!-- CONTACT -->
-<div class="container">
-  <h2>Need Service?</h2>
-
-  <a href="tel:17169549186" class="btn">Call Now</a>
-</div>
-
-<!-- STICKY CALL -->
-<div class="sticky-call">
-  <a href="tel:17169549186" style="color:white; text-decoration:none;">
-    📞 Call Now: (716) 954-9186
-  </a>
-</div>
 
 </body>
 </html>
