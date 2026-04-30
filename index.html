@@ -1,155 +1,174 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>TMB Heating & Cooling</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TMB Heating & Cooling</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #0f172a;
-      color: white;
-    }
-
-    .container {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 15px 25px;
-      background: #f97316;
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      border-radius: 8px;
-      margin-top: 15px;
-    }
-
-    .section-light {
-      background: white;
-      color: black;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .grid {
-      display: grid;
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .card {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 10px;
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
   color: white;
 }
 
-    .sticky-call {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background: #f97316;
-      text-align: center;
-      padding: 15px;
-      font-weight: bold;
-      z-index: 1000;
-    }
+header {
+  text-align: center;
+  padding: 80px 20px;
+}
 
-    .header {
-      background: #020617;
-      padding: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+h1 {
+  font-size: 42px;
+}
 
-    .logo {
-      max-width: 140px;
-      height: auto;
-    }
+h2 {
+  margin-bottom: 20px;
+}
 
-    .call-top {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
 
-    @media (min-width: 768px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-  </style>
+.logo {
+  max-width: 180px;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  background: #f97316;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: 0.2s;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.card {
+  background: linear-gradient(145deg, #1e293b, #0f172a);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.review {
+  margin: 15px auto;
+  max-width: 600px;
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+}
+
+form {
+  max-width: 500px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+footer {
+  background: #f97316;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media(max-width:700px){
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
+<header>
   <img src="TMBCard.png logo only.png" class="logo">
-  <a href="tel:17169549186" class="call-top">📞 (716) 954-9186</a>
-</div>
-
-<!-- HERO -->
-<div class="container">
-  <h1>Fast, Reliable HVAC Service You Can Trust</h1>
+  <h1>TMB Heating & Cooling</h1>
+  <p>Temperature Made Better</p>
   <p>Serving Erie & Niagara County</p>
 
-  <a href="tel:17169549186" class="btn">Call Now</a>
+  <a href="tel:17169549186" class="button">Call Now</a>
 
-  <p style="margin-top:10px;">24/7 Emergency Service Available</p>
-</div>
+  <p style="margin-top:15px;">24/7 Emergency Service Available</p>
+</header>
 
-<!-- SERVICES -->
-<div class="section-light">
+<section>
   <h2>Our Services</h2>
 
-  <div class="grid">
+  <div class="card-container">
     <div class="card">🔥 Heating Repair & Installation</div>
     <div class="card">❄️ Air Conditioning Service</div>
     <div class="card">🛠 System Installations</div>
     <div class="card">📋 Maintenance Plans</div>
   </div>
-</div>
+</section>
 
-<!-- REVIEWS -->
-<div class="container">
-  <h2>What Customers Are Saying</h2>
+<section style="background:#111827;">
+  <h2>Real Customer Reviews</h2>
 
-  <div class="grid">
-    <div class="card">⭐️⭐️⭐️⭐️⭐️ Quick, honest, and fixed the issue the first time.</div>
-    <div class="card">⭐️⭐️⭐️⭐️⭐️ Very professional and explained everything clearly.</div>
-    <div class="card">⭐️⭐️⭐️⭐️⭐️ Showed up fast and got our heat back on.</div>
-  </div>
-</div>
+  <div class="review">⭐⭐⭐⭐⭐ Fast, honest, and fixed it the first time.</div>
+  <div class="review">⭐⭐⭐⭐⭐ Showed up quick and got our heat back on.</div>
+  <div class="review">⭐⭐⭐⭐⭐ Very professional and explained everything clearly.</div>
 
-<!-- WHY US -->
-<div class="section-light">
-  <h2>Why Choose TMB?</h2>
-
-  <p>✔ Owner-Operated</p>
-  <p>✔ Honest Diagnostics</p>
-  <p>✔ Clean, Professional Work</p>
-  <p>✔ Fast Response Times</p>
-</div>
-
-<!-- CONTACT -->
-<div class="container">
-  <h2>Need Service?</h2>
-
-  <a href="tel:17169549186" class="btn">Call Now</a>
-</div>
-
-<!-- STICKY CALL -->
-<div class="sticky-call">
-  <a href="tel:17169549186" style="color:white; text-decoration:none;">
-    📞 Call Now: (716) 954-9186
+  <a href="https://g.page/r/YOUR-GOOGLE-LINK/review" target="_blank" class="button">
+    Leave Us a Google Review
   </a>
-</div>
+</section>
+
+<section>
+  <h2>Service Areas</h2>
+  <p>
+    Buffalo • Tonawanda • North Tonawanda • Amherst • Cheektowaga •
+    Williamsville • Kenmore • Niagara Falls • Lockport • Grand Island
+  </p>
+</section>
+
+<section style="background:#111827;">
+  <h2>Request a Free Quote</h2>
+
+  <form action="https://formsubmit.co/tmbheatingandcooling@gmail.com" method="POST">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+
+    <input type="email" name="email" placeholder="Email (optional)">
+
+    <textarea name="message" placeholder="What do you need help with?" required></textarea>
+
+    <button class="button" type="submit">Get My Quote</button>
+  </form>
+</section>
+
+<footer>
+  📞 Call Now: (716) 954-9186
+</footer>
 
 </body>
 </html>
