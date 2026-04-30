@@ -3,77 +3,131 @@
 <head>
   <title>TMB Heating & Cooling</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #0f172a;
+      color: white;
+    }
+
+    .container {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 25px;
+      background: #f97316;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    .section-light {
+      background: white;
+      color: black;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .sticky-call {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #f97316;
+      text-align: center;
+      padding: 15px;
+      font-weight: bold;
+      z-index: 1000;
+    }
+
+    .header {
+      background: #020617;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      max-width: 140px;
+      height: auto;
+    }
+
+    .call-top {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
 </head>
 
-<body style="font-family: Arial; margin:0; background:#0f172a; color:white;">
+<body>
 
-<!-- STICKY CALL BUTTON -->
-<div style="position:fixed; bottom:0; width:100%; background:#f97316; text-align:center; padding:15px; z-index:1000;">
-  <a href="tel:17169549186" style="color:white; font-size:20px; text-decoration:none; font-weight:bold;">
-    📞 Call Now: (716) 954-9186
-  </a>
+<!-- HEADER -->
+<div class="header">
+  <img src="TMBCard.png logo only.png" class="logo">
+  <a href="tel:17169549186" class="call-top">📞 (716) 954-9186</a>
 </div>
 
 <!-- HERO -->
-<div style="padding:50px; text-align:center;">
-<img src="TMBCard.png logo only.png" style="
-  max-width:180px;
-  width:100%;
-  height:auto;
-  margin-bottom:15px;
-  display:block;
-  margin-left:auto;
-  margin-right:auto;
-">
-<h1 style="font-size:28px;">Heating & Cooling Services</h1>
-  <p style="font-size:18px;">Temperature Made Better</p>
-
-  <h2 style="margin-top:20px;">
-    Fast, Reliable HVAC Service You Can Trust
-  </h2>
-
+<div class="container">
+  <h1>Fast, Reliable HVAC Service You Can Trust</h1>
   <p>Serving Erie & Niagara County</p>
 
-  <a href="tel:17169549186" style="
-    display:inline-block;
-    margin-top:20px;
-    padding:15px 25px;
-    background:#f97316;
-    color:white;
-    text-decoration:none;
-    font-size:18px;
-    border-radius:8px;">
-    📞 Call Now
-  </a>
+  <a href="tel:17169549186" class="btn">Call Now</a>
 
-  <p style="margin-top:10px;">
-    OR CALL: <strong>(716) 954-9186</strong>
-  </p>
-
-  <p style="font-size:14px;">24/7 Emergency Service Available</p>
+  <p style="margin-top:10px;">24/7 Emergency Service Available</p>
 </div>
 
 <!-- SERVICES -->
-<div style="background:white; color:black; padding:40px; text-align:center;">
+<div class="section-light">
   <h2>Our Services</h2>
 
-  <p>🔥 Heating Repair & Installation</p>
-  <p>❄️ Air Conditioning Service</p>
-  <p>🛠 System Installations</p>
-  <p>📋 Maintenance Plans</p>
+  <div class="grid">
+    <div class="card">🔥 Heating Repair & Installation</div>
+    <div class="card">❄️ Air Conditioning Service</div>
+    <div class="card">🛠 System Installations</div>
+    <div class="card">📋 Maintenance Plans</div>
+  </div>
 </div>
 
 <!-- REVIEWS -->
-<div style="padding:40px; text-align:center;">
+<div class="container">
   <h2>What Customers Are Saying</h2>
 
-  <p>⭐️⭐️⭐️⭐️⭐️ “Quick, honest, and fixed the issue the first time.”</p>
-  <p>⭐️⭐️⭐️⭐️⭐️ “Very professional and explained everything clearly.”</p>
-  <p>⭐️⭐️⭐️⭐️⭐️ “Showed up fast and got our heat back on.”</p>
+  <div class="grid">
+    <div class="card">⭐️⭐️⭐️⭐️⭐️ Quick, honest, and fixed the issue the first time.</div>
+    <div class="card">⭐️⭐️⭐️⭐️⭐️ Very professional and explained everything clearly.</div>
+    <div class="card">⭐️⭐️⭐️⭐️⭐️ Showed up fast and got our heat back on.</div>
+  </div>
 </div>
 
 <!-- WHY US -->
-<div style="background:#1e293b; padding:40px; text-align:center;">
+<div class="section-light">
   <h2>Why Choose TMB?</h2>
 
   <p>✔ Owner-Operated</p>
@@ -83,19 +137,16 @@
 </div>
 
 <!-- CONTACT -->
-<div style="padding:40px; text-align:center;">
+<div class="container">
   <h2>Need Service?</h2>
 
-  <a href="tel:17169549186" style="
-    display:inline-block;
-    margin-top:20px;
-    padding:15px 25px;
-    background:#f97316;
-    color:white;
-    text-decoration:none;
-    font-size:18px;
-    border-radius:8px;">
-    Call Now
+  <a href="tel:17169549186" class="btn">Call Now</a>
+</div>
+
+<!-- STICKY CALL -->
+<div class="sticky-call">
+  <a href="tel:17169549186" style="color:white; text-decoration:none;">
+    📞 Call Now: (716) 954-9186
   </a>
 </div>
 
