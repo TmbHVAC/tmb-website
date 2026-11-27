@@ -377,6 +377,71 @@
     .quote-section .section-intro p {
       color: #cbd5e1;
     }
+    @media (max-width: 600px) {
+  .hero {
+    padding: 32px 16px;
+  }
+
+  .hero h1 {
+    font-size: clamp(30px, 8vw, 36px);
+    letter-spacing: -0.8px;
+    line-height: 1.15;
+  }
+
+  .hero p {
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+
+  .hero .note {
+    font-size: 13px;
+    margin: 16px 0 0;
+  }
+
+  .btn-row {
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .btn-row .btn {
+    flex: 1 1 135px;
+    padding: 14px 10px;
+    font-size: 15px;
+  }
+
+  section {
+    padding: 40px 16px;
+  }
+
+  section[id] {
+    scroll-margin-top: 100px;
+  }
+
+  .section-intro {
+    margin-bottom: 24px;
+  }
+
+  .section-intro p {
+    font-size: 16px;
+  }
+
+  .card, .light-card {
+    padding: 20px;
+  }
+
+  #installations .wrap > div[style] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  #installations figcaption {
+    font-size: 13px;
+  }
+
+  .footer {
+    padding-bottom: 40px;
+  }
+    }
   </style>
 </head>
 
